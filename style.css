@@ -3,6 +3,18 @@ body {
     text-align: center;
 }
 
+input {
+    font-size: 16px;
+}
+
+h1 {
+    margin-bottom: 0px;
+}
+
+h5 {
+    margin-top: 0px;
+}
+
 .error {
     color: rgb(255, 82, 82);
     font-weight: bold;
