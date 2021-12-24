@@ -10,7 +10,7 @@ This project is dedicated to providing an easy way to determine if the phone num
 
 ## Procedure on updating the analyzer's data
 
-1. go to [data.json](data.json) and change the necessary items
+1. go to [data.js](data.js) and change the necessary items
 2. make a pull request. Be sure to provide the responsible phone numbers that are either a scammer's or a legitimate business's.
 3. wait for me to accept your PR
 4. analyzer gets updated!
