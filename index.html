@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="lookup a phone number to determine whether you should call back">
+    <meta name="keywords" content="phone lookup">
+    <meta name="author" content="Simon Cheng">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Should I Call Back?</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.15/css/intlTelInput.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.15/js/intlTelInput.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <h1>
+        Should I call back?
+    </h1>
+    <div class="container">
+        <form id="login" onsubmit="handleSubmit(event)">
+            <input id="phone" type="tel" name="phone" />
+            <input type="submit" class="btn" value="Lookup" />
+        </form>
+        <p class="error" style="display: none"></p>
+        <p class="info" style="display: none"></p>
+        <div class="data-container" style="display: none">
+            <p id="analysis"></p>
+            <div class="search-container">
+                Regardless, it's a good idea to search Google for these phone numbers to check if it belongs to a valid business:
+                <div>
+                    Click on the links to Google <a href="#" id="national-format-link" class="search-btn" target="_blank">+13334445555</a> or
+                    <a href="#" id="e164-format-link" class="search-btn" target="_blank">(333) 444-5555</a>
+                </div>
+            </div>
+            <table>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="data.js"></script>
+    <script src="analyze-lookup.js"></script>
+    <script src="api.js"></script>
+    <script src="postload.js"></script>
+</body>
+
+</html>

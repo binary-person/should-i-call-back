@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.error {
+    color: rgb(255, 82, 82);
+    font-weight: bold;
+}
+
+.info {
+    color: rgb(97, 97, 97);
+    font-weight: bold;
+}
+
+#analysis {
+    text-align: left;
+    font-size: 20px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.search-container {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.search-links {
+    text-align: left;
+}
+
+.red {
+    color:#ff0000;
+}
+.orange {
+    color: #cd8500;
+}
+.green {
+    color: #008b00;
+}
+.gray {
+    color: #7a7a7a;
+}
+
+.data-container {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table {
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    overflow-wrap: anywhere;
+}
+
+tr:nth-child(even) {
+    background-color: #e6e6e6;
+}
+
+.td-left {
+    font-weight: bold;
+    max-width: 110px;
+}
