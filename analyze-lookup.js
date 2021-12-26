@@ -20,16 +20,16 @@ function checkRunner(data, checks) {
 const allNumberChecksPre = [
     function carrierCheck(data) {
         if (!data.carrier.name) return;
-        const doCheck = function (list, generator) {
+        const doCheck = function (list, generator, defaultMsg) {
             for (const carrier of list) {
-                if (data.carrier.name.includes(carrier.name)) {
-                    return generator(carrier.msg);
+                if (data.carrier.name.includes(carrier.name || carrier)) {
+                    return generator(carrier.msg || defaultMsg);
                 }
             }
         };
-        return doCheck(carrierList.trusted, doCallBack)
-            || doCheck(carrierList.highRisk, highRisk)
-            || doCheck(carrierList.blacklist, dontCallBack)
+        return doCheck(carrierList.trusted, doCallBack, defaultCarrierMessage.trusted)
+            || doCheck(carrierList.highRisk, highRisk, defaultCarrierMessage.highRisk)
+            || doCheck(carrierList.blacklist, dontCallBack, defaultCarrierMessage.blacklist)
             || undefined;
     }
 ];
@@ -38,17 +38,17 @@ const allNumberChecksPre = [
 const allNumberChecksPost = [
     function landlineCheck(data) {
         if (data.carrier.type === 'fixed line') {
-            return dontCallBack('Fixed line numbers are attached to the internet. If you cannot find information on Google about this number, this likely came from a scammer.');
+            return highRisk('Call back with caution, as I have not seen this carrier provider before. Fixed line numbers are used by a lot of home phones, businesses, and robocallers. If you do not recognize nor can you find any information on Google about this number, this likely came from a robocaller.', true);
         }
     },
     function voipCheck(data) {
         if (data.carrier.type === 'voip') {
-            return dontCallBack('VOIP numbers are calls made over the internet. If you cannot find information on Google about this number, this likely came from a scammer.');
+            return highRisk('Call back with caution, as I have not seen this carrier provider before. VOIP numbers are calls made over the internet. If you cannot find information on Google about this number, this likely came from a robocaller.', true);
         }
     },
     function mobileCheck(data) {
         if (data.carrier.type === 'mobile') {
-            return doCallBack('Since this is made from a mobile phone, this is likely a legitimate phone call. Proceed with caution as I have never seen this carrier.');
+            return doCallBack('Though I have not seen this carrier provider before, because this call was made from a mobile phone, this is likely a legitimate phone call.');
         }
     }
 ];
