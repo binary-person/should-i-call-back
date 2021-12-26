@@ -1,6 +1,7 @@
 const aliases = {
     'AT&T': ['NEW CINGULAR WIRELESS PCS, LLC'],
-    'T-Mobile': ['OMNIPOINT COMMUNICATIONS ENTER']
+    'T-Mobile': ['OMNIPOINT COMMUNICATIONS ENTER'],
+    'CenturyLink': ['QWEST CORPORATION']
 };
 
 const carrierList = {
@@ -10,6 +11,9 @@ const carrierList = {
     }, {
         name: 'OMNIPOINT COMMUNICATIONS ENTER',
         msg: 'This number came from a T-Mobile customer.'
+    }, {
+        name: 'QWEST CORPORATION',
+        msg: 'This number came from a CenturyLink customer.'
     }, {
         name: 'VERIZON',
         msg: 'This number came from a Verizon customer.'
