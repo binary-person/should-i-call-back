@@ -4,6 +4,11 @@ const aliases = {
     'CenturyLink': ['QWEST CORPORATION']
 };
 
+const defaultCarrierMessage = {
+    trusted: "This carrier's phone numbers are used by a lot of businesses and very few robocallers.",
+    highRisk: "This carrier's phone numbers are used by some businesses and some robocallers. Google the number to be sure it belongs to a legitimate business.",
+    blacklist: "This carrier's phone numbers are used by very few businesses and a lot of robocallers."
+};
 const carrierList = {
     trusted: [{
         name: 'NEW CINGULAR WIRELESS PCS, LLC',
@@ -27,9 +32,6 @@ const carrierList = {
     highRisk: [{
         name: 'ONVOY, LLC',
         msg: 'ONVOY has a history of allowing spam calls. This likely came from a spam caller.'
-    }, {
-        name: 'LEVEL 3 COMMUNICATIONS, LLC',
-        msg: "LEVEL 3 COMMUNICATIONS phone numbers are used by businesses and scammers. Google the number to be sure it belongs to a legitimate business."
-    }],
+    }, 'LEVEL 3 COMMUNICATIONS, LLC', 'TELEPORT COMMUNICATIONS GROUP'],
     blacklist: []
 };
