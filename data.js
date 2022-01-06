@@ -14,7 +14,10 @@ const carrierList = {
         name: 'NEW CINGULAR WIRELESS PCS, LLC',
         msg: 'This number came from an AT&T customer.'
     }, {
-        name: 'OMNIPOINT COMMUNICATIONS ENTER',
+        name: 'OMNIPOINT COMMUNICATIONS',
+        msg: 'This number came from a T-Mobile customer.'
+    }, {
+        name: 'AERIAL COMMUNICATIONS',
         msg: 'This number came from a T-Mobile customer.'
     }, {
         name: 'QWEST CORPORATION',
@@ -32,6 +35,9 @@ const carrierList = {
     highRisk: [{
         name: 'ONVOY, LLC',
         msg: 'ONVOY has a history of allowing spam calls. This likely came from a spam caller.'
+    }, {
+        name: 'BELLSOUTH TELECOMM, INC DBA SO',
+        msg: 'BELLSOUTH TELECOMM, INC DBA SO is a subsidary company of AT&T. There have been a history of telemarketers originating from here, but home lines also use this.'
     }, 'LEVEL 3 COMMUNICATIONS, LLC', 'TELEPORT COMMUNICATIONS GROUP'],
     blacklist: []
 };
