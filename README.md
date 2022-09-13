@@ -1,8 +1,12 @@
 # Should I Call Back?
 
+(deprecated. The free API service now charges money per lookup)
+
 > lookup a phone number to determine whether you should call back
 
-Link to the app: https://should-i-call-back.binary-person.dev
+Link to the new app: https://should-i-call-back.org
+
+Link to the old app: https://should-i-call-back.binary-person.dev
 
 ## Background
 
